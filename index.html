@@ -5,21 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Chatbot</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: sans-serif;
       background: #f0f4f8;
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      height: 100vh;
+      justify-content: center;
     }
+
     h1 {
       position: fixed;
       top: 20px;
-      left: 0; right: 0;
+      left: 0;
+      right: 0;
       text-align: center;
       color: #333;
+      font-size: clamp(1rem, 5vw, 1.8rem);
+      padding: 0 16px;
+    }
+
+    /* Asegura que el widget del chatbot sea accesible en móvil */
+    #cai-webchat {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index: 9999;
     }
   </style>
 </head>
